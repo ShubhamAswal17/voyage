@@ -102,7 +102,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::nGDomwQyfeHmUvS1',
+            '_route' => 'generated::N555bI6u0Vlk7r8Q',
           ),
           1 => NULL,
           2 => 
@@ -176,13 +176,13 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/auth/login-basic' => 
+      '/auth/register-basic' => 
       array (
         0 => 
         array (
           0 => 
           array (
-            '_route' => 'auth-login-basic',
+            '_route' => 'auth-register-basic',
           ),
           1 => NULL,
           2 => 
@@ -196,13 +196,33 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/auth/register-basic' => 
+      '/login' => 
       array (
         0 => 
         array (
           0 => 
           array (
-            '_route' => 'auth-register-basic',
+            '_route' => 'Admin.Login',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/logindata' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'Admin.Log',
           ),
           1 => NULL,
           2 => 
@@ -373,7 +393,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::nGDomwQyfeHmUvS1' => 
+    'generated::N555bI6u0Vlk7r8Q' => 
     array (
       'methods' => 
       array (
@@ -390,13 +410,13 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'O:55:"Laravel\\SerializableClosure\\UnsignedSerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:77:"function (\\Illuminate\\Http\\Request $request) {
     return $request->user();
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"000000000000054e0000000000000000";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000005350000000000000000";}}',
         'namespace' => NULL,
         'prefix' => 'api',
         'where' => 
         array (
         ),
-        'as' => 'generated::nGDomwQyfeHmUvS1',
+        'as' => 'generated::N555bI6u0Vlk7r8Q',
       ),
       'fallback' => false,
       'defaults' => 
@@ -523,43 +543,6 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'auth-login-basic' => 
-    array (
-      'methods' => 
-      array (
-        0 => 'GET',
-        1 => 'HEAD',
-      ),
-      'uri' => 'auth/login-basic',
-      'action' => 
-      array (
-        'middleware' => 
-        array (
-          0 => 'web',
-        ),
-        'uses' => 'App\\Http\\Controllers\\authentications\\LoginBasic@index',
-        'controller' => 'App\\Http\\Controllers\\authentications\\LoginBasic@index',
-        'namespace' => NULL,
-        'prefix' => '',
-        'where' => 
-        array (
-        ),
-        'as' => 'auth-login-basic',
-      ),
-      'fallback' => false,
-      'defaults' => 
-      array (
-      ),
-      'wheres' => 
-      array (
-      ),
-      'bindingFields' => 
-      array (
-      ),
-      'lockSeconds' => NULL,
-      'waitSeconds' => NULL,
-      'withTrashed' => false,
-    ),
     'auth-register-basic' => 
     array (
       'methods' => 
@@ -582,6 +565,80 @@ app('router')->setCompiledRoutes(
         array (
         ),
         'as' => 'auth-register-basic',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'Admin.Login' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'login',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'uses' => 'App\\Http\\Controllers\\authentications\\LoginBasic@index',
+        'controller' => 'App\\Http\\Controllers\\authentications\\LoginBasic@index',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'Admin.Login',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'Admin.Log' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'logindata',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'uses' => 'App\\Http\\Controllers\\authentications\\loginController@index',
+        'controller' => 'App\\Http\\Controllers\\authentications\\loginController@index',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'Admin.Log',
       ),
       'fallback' => false,
       'defaults' => 
