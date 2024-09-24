@@ -30,5 +30,6 @@ Route::get('/pages/misc-error', $controller_path . '\pages\MiscError@index')->na
 Route::get('/auth/register-basic', $controller_path . '\authentications\RegisterBasic@index')->name('auth-register-basic');
 
 
-Route::get('/login', [LoginBasic::class, 'index'])->name('Admin.Login');
+Route::get('/login', [LoginBasic::class, 'index'])->name('Admin.Form');
+Route::post('/login', [LoginBasic::class, 'loginAdmin'])->name('Admin.Login');
 Route::get('/logindata', [loginController::class, 'index'])->name('Login');
